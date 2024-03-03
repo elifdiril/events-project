@@ -12,6 +12,7 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
       {events.map((event: EventProps) => (
         <EventItem key={event?.id} {...event} />
       ))}
+      
     </div>
   );
 };

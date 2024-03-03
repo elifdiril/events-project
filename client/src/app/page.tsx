@@ -1,5 +1,5 @@
-import EventList from "@/components/EventList";
 import Header from "@/components/Header";
+import HomePage from "@/components/HomePage";
 import EventProps from "@/interfaces/EventProps";
 
 async function getData() {
@@ -15,9 +15,9 @@ async function getData() {
 export default async function Home() {
   const data: EventProps[] = await getData();
   return (
-    <main>
+    <main className="dark text-foreground bg-background">
       <Header />
-      <EventList events={data} />
+      <HomePage events={data} />
     </main>
   );
 }
